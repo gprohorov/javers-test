@@ -2,7 +2,7 @@ package dev.bo.javerstest.config;
 
 
 /*
-  @author   george
+  @author   oleh
   @project   proj-test
   @class  AuditionConfiguration
   @version  1.0.0 
@@ -11,10 +11,7 @@ package dev.bo.javerstest.config;
 
 
 
-import com.mongodb.client.MongoClient;
-import org.javers.core.Javers;
-import org.javers.core.JaversBuilder;
-import org.javers.repository.mongo.MongoRepository;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
@@ -28,23 +25,4 @@ public class AuditionConfiguration {
     public AuditorAware<String> auditorAware() {
         return new AuditorAwareImpl();
     }
-//
-//    @Bean
-//    public Javers javers() {
-//        MongoRepository javersMongoRepository =
-//                new MongoRepository(mongo().getDatabase("javers-db"));
-//
-//        return JaversBuilder.javers()
-//                .registerJaversRepository(javersMongoRepository)
-//                .build();
-//    }
-//
-//    @Bean
-//    public MongoClient mongo() {
-//        return new MongoClient();
-//    }
-
-
-
-
 }

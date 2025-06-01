@@ -2,7 +2,7 @@ package dev.bo.javerstest.service;
 
 
 /*
-  @author george
+  @author oleh
   @project   proj-test
   @class  ItemService
   @version  1.0.0 
@@ -15,11 +15,6 @@ import dev.bo.javerstest.model.Item;
 import dev.bo.javerstest.repository.ItemRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
-import org.javers.core.Changes;
-import org.javers.core.diff.Change;
-import org.javers.spring.annotation.JaversAuditable;
-import org.javers.spring.annotation.JaversAuditableDelete;
-import org.javers.spring.annotation.JaversSpringDataAuditable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -38,8 +33,9 @@ public class ItemService {
         items.add(new Item( "name3", "000003","description3"));
     }
 
-    //  @PostConstruct
+     @PostConstruct
     void init() {
+        itemRepository.deleteAll();
         for (Item item : items) {
             this.create(item);
         }
@@ -54,13 +50,13 @@ public class ItemService {
         return itemRepository.findById(id).orElse(null);
     }
 
-    @JaversAuditable
+
     public Item create(Item item) {
         return itemRepository.save(item);
     }
 
 
-    @JaversAuditable
+
     public  Item update(Item item) {
         Item oldItem = getById(item.getId());
         if (oldItem == null) {
@@ -78,7 +74,7 @@ public class ItemService {
       delete(item);
     }
 
-    @JaversAuditableDelete
+
     private void delete(Item item) {
         itemRepository.delete(item);
     }

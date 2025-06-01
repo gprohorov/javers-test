@@ -2,7 +2,7 @@ package dev.bo.javerstest.model;
 
 
 /*
-  @author   george
+  @author   oleh
   @project   proj-test
   @class  Item
   @version  1.0.0 

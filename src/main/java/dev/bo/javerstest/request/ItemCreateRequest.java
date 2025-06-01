@@ -2,7 +2,7 @@ package dev.bo.javerstest.request;
 
 
 /*
-  @author   george
+  @author   oleh
   @project   proj-test
   @class  ItemCreateRequest
   @version  1.0.0 

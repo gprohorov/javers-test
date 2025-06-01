@@ -8,7 +8,7 @@ import dev.bo.javerstest.service.*;
 import java.util.List;
 
 /*
-  @author   george
+  @author   oleh
   @project   proj-test
   @class  ItemRestController
   @version  1.0.0 

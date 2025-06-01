@@ -2,7 +2,7 @@ package dev.bo.javerstest.config;
 
 
 /*
-  @author   george
+  @author   oleh
   @project   proj-test
   @class  AuditorAware
   @version  1.0.0 
@@ -16,7 +16,6 @@ import java.util.Optional;
 public class AuditorAwareImpl implements AuditorAware<String> {
     @Override
     public Optional<String> getCurrentAuditor() {
-        //return Optional.of("admin");
         return Optional.of(System.getProperty("user.name"));
     }
 }
