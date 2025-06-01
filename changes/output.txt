@@ -1,0 +1,30 @@
+
+BODY
+raw
+<pre>Changes:
+Commit 5.01 done by ADMIN at 05 May 2025, 09:16:49 :
+* object removed: dev.bo.javerstest.model.Item/681854c2653d43364f2b6831
+  - 'code' value '000003' unset
+  - 'createdBy' value 'admin' unset
+  - 'createdDate' value '05 May 2025, 09:03:46' unset
+  - 'description' value 'new description' unset
+  - 'id' value '681854c2653d43364f2b6831' unset
+  - 'lastModifiedBy' value 'admin' unset
+  - 'lastModifiedDate' value '05 May 2025, 09:12:08' unset
+  - 'name' value 'name3' unset
+Commit 4.00 done by ADMIN at 05 May 2025, 09:12:08 :
+* changes on dev.bo.javerstest.model.Item/681854c2653d43364f2b6831 :
+  - 'createdDate' changed: '05 May 2025, 09:03:46' -> '05 May 2025, 09:03:46'
+  - 'description' changed: 'description3' -> 'new description'
+  - 'lastModifiedDate' changed: '05 May 2025, 09:03:46' -> '05 May 2025, 09:12:08'
+Commit 3.00 done by ADMIN at 05 May 2025, 09:03:46 :
+* new object: dev.bo.javerstest.model.Item/681854c2653d43364f2b6831
+  - 'code' = '000003'
+  - 'createdBy' = 'admin'
+  - 'createdDate' = '05 May 2025, 09:03:46'
+  - 'description' = 'description3'
+  - 'id' = '681854c2653d43364f2b6831'
+  - 'lastModifiedBy' = 'admin'
+  - 'lastModifiedDate' = '05 May 2025, 09:03:46'
+  - 'name' = 'name3'
+</pre>

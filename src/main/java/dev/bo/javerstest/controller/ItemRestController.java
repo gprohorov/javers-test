@@ -20,10 +20,20 @@ import java.util.List;
 public class ItemRestController {
 
     private final ItemService itemService;
+    Item item = new Item("name1", "000001","");
+    int counter = 0;
 
     @GetMapping
     public List<Item> showAll() {
         return itemService.getAll();
+    }
+
+    @GetMapping("/test")
+    public Item test() {
+
+     //   System.out.println(" test" + counter);
+        item.setDescription("test javers " + counter++);
+        return itemService.create(item);
     }
 
     @GetMapping("{id}")

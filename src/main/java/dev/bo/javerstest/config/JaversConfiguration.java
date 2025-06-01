@@ -21,9 +21,9 @@ public class JaversConfiguration {
             return "ADMIN";
         }
     }
-
     @Bean
     public AuthorProvider provideJaversAuthor() {
+
         return new SimpleAuthorProvider();
     }
 

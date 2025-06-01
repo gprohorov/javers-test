@@ -31,15 +31,18 @@ public class ItemService {
 
     private final ItemRepository itemRepository;
 
-    private final List<Item> items = new ArrayList<>();
+    int counter = 0;
+
+    private  List<Item> items = new ArrayList<>();
     {
         items.add(new Item( "name1", "000001","description1"));
         items.add(new Item( "name2", "000002","description3"));
         items.add(new Item( "name3", "000003","description3"));
     }
 
-    //  @PostConstruct
+      @PostConstruct
     void init() {
+        itemRepository.deleteAll();
         for (Item item : items) {
             this.create(item);
         }
@@ -47,6 +50,7 @@ public class ItemService {
     //  CRUD   - create read update delete
 
     public List<Item> getAll() {
+        System.out.println("*** " +counter++);
         return itemRepository.findAll();
     }
 
@@ -55,19 +59,20 @@ public class ItemService {
     }
 
     @JaversAuditable
-    public Item create(Item item) {
+    public Item create(Item item)
+    {
         return itemRepository.save(item);
     }
 
 
-    @JaversAuditable
+  //  @JaversAuditable
     public  Item update(Item item) {
         Item oldItem = getById(item.getId());
         if (oldItem == null) {
             return null;
         }
-        item.setCreatedDate(oldItem.getCreatedDate());
-        item.setCreatedBy(oldItem.getCreatedBy());
+//        item.setCreatedDate(oldItem.getCreatedDate());
+//        item.setCreatedBy(oldItem.getCreatedBy());
 
         return itemRepository.save(item);
     }
