@@ -53,9 +53,11 @@ public class AuditController {
 
     @GetMapping("/shadows/{id}")
     public ResponseEntity<String> getItemShadow(@PathVariable String id) {
+
         QueryBuilder jqlQuery = QueryBuilder.byInstanceId(id, Item.class)
                 .withNewObjectChanges();
         List<Shadow<Item>> shadows = javers.findShadows(jqlQuery.build());
+
         return ResponseEntity.ok().body(javers.getJsonConverter().toJson(shadows));
     }
 
