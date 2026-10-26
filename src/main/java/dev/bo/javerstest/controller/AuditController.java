@@ -59,7 +59,7 @@ public class AuditController {
         return ResponseEntity.ok().body(javers.getJsonConverter().toJson(shadows));
     }
 
-    @GetMapping("/item/{id}")
+    @GetMapping("/changes/item/{id}")
     public String getItemChanges(@PathVariable String id) {
 
         QueryBuilder jqlQuery = QueryBuilder.byInstanceId(id, Item.class)

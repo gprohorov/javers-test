@@ -65,7 +65,7 @@ public class ItemService {
     }
 
 
-  //  @JaversAuditable
+   @JaversAuditable
     public  Item update(Item item) {
         Item oldItem = getById(item.getId());
         if (oldItem == null) {
